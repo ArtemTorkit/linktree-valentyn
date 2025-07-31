@@ -1,90 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
-        <link rel="shortcut icon" href="assets/images/icon.svg" type="image/webp">
-        <link rel="apple-touch-icon" sizes="180x180" href="images/icon.svg">
-        <link rel="icon" href="assets/images/icon.svg" type="image/webp">
-        <title>@Sukoblet</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Snowfall Background Animation -->
-        <section class="animated-background">
-            <div id="stars1"></div>
-            <div id="stars2"></div>
-            <div id="stars3"></div>
-        </section>
-        <!-- End of Snowfall Background Animation -->
+	<head>
+		<meta charset="utf-8" />
+		<link href="assets/css/style.css" rel="stylesheet" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		/>
+		<link rel="shortcut icon" href="assets/images/icon.svg" type="image/webp" />
+		<link rel="apple-touch-icon" sizes="180x180" href="images/icon.svg" />
+		<link rel="icon" href="assets/images/icon.svg" type="image/webp" />
+		<title>@Sukoblet</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+			rel="stylesheet"
+		/>
 
-        <div class="min-h-full flex-h-center" id="background_div">
-            <input type="hidden" value="https://bio.link" id="app-url">
-            <input type="hidden" value="null" id="is-featured">
-            <canvas id="bg-canvas" class="background-overlay"></canvas>
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Sukoblet" />
+		<meta
+			property="og:description"
+			content="Follow Sukoblet on Twitch, YouTube, Instagram, and more!"
+		/>
+		<meta
+			property="og:image"
+			content="assets/images/logo.jpg"
+		/>
 
-            <div class="mt-48 page-full-wrap relative ">
-                <input type="hidden" value="creator-page" id="page-type">
-                <img class="display-image m-auto" src="assets/images/logo.jpg" alt="Sukoblet Logo"/>
-                <h2 class="page-title page-text-color page-text-font mt-16 text-center">Sukoblet</h2>
+		<!-- Twitter Card (Optional) -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Sukoblet" />
+		<meta
+			name="twitter:description"
+			content="Follow Sukoblet on Twitch, YouTube, Instagram, and more!"
+		/>
+		<meta
+			name="twitter:image"
+			content="assets/images/logo.jpg"
+		/>
+	</head>
+	<body>
+		<!-- Snowfall Background Animation -->
+		<section class="animated-background">
+			<div id="stars1"></div>
+			<div id="stars2"></div>
+			<div id="stars3"></div>
+		</section>
+		<!-- End of Snowfall Background Animation -->
 
-                <div class="mt-24">
-                    <div class="page-item-wrap relative">
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://www.twitch.tv/suk0blet" data-id="261652" data-type="page_item">
-                            <img class="link-each-image" data-src="assets/images/twitch.png" src="assets/images/twitch.svg" alt="Twitch @suk0blet"/>
-                            <span class="item-title text-center">Twitch @suk0blet</span>
-                        </a>
-                    </div>
-                    <div class="page-item-wrap relative">
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://www.instagram.com/sukoblet" data-id="261685" data-type="page_item">
-                            <img class="link-each-image" data-src="assets/images/instagram.png" src="assets/images/instagram.svg" alt="Instagram @sukoblet"/>
-                            <span class="item-title text-center">Instagram @sukoblet</span>
-                        </a>
-                    </div>
-                    <div class="page-item-wrap relative">
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://www.tiktok.com/@suk0blet" data-id="261685" data-type="page_item">
-                            <img class="link-each-image" data-src="assets/images/facebook.png" src="assets/images/tiktok.svg" alt="TikTok @suk0blet"/>
-                            <span class="item-title text-center">TikTok @suk0blet</span>
-                        </a>
-                    </div>
-                    <div class="page-item-wrap relative">
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://t.me/suk0blet" data-id="261685" data-type="page_item">
-                            <img class="link-each-image" data-src="assets/images/telegram.png" src="assets/images/telegram.svg" alt="Telegram @suk0blet"/>
-                            <span class="item-title text-center">Telegram @suk0blet</span>
-                        </a>
-                    </div>
-                    <div class="page-item-wrap relative">
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://www.youtube.com/@suk0blet" data-id="261685" data-type="page_item">
-                            <img class="link-each-image" data-src="assets/images/youtube.png" src="assets/images/youtube.svg" alt="YouTube @suk0blet"/>
-                            <span class="item-title text-center">YouTube @suk0blet</span>
-                        </a>
-                    </div>
-                    <div class="page-item-wrap relative">
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://donatello.to/suk0blet" data-id="261685" data-type="page_item">
-                            <img class="link-each-image" data-src="assets/images/donatello.png" src="assets/images/donatello.png" alt="Support @suk0blet on Donatello"/>
-                            <span class="item-title text-center">Donatello @suk0blet</span>
-                        </a>
-                    </div>
-                    <div class="page-item-wrap relative">
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a target="_blank" class="page-item-each py-10 flex-both-center" href="https://steamcommunity.com/tradeoffer/new/?partner=933529524&token=KvY5XUbg" data-id="261685" data-type="page_item">
-                            <img class="link-each-image" data-src="assets/images/instagram.png" src="assets/images/steam.jpg" alt="Steam Trade Offer for @suk0blet"/>
-                            <span class="item-title text-center">SteamTrade @suk0blet</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+		<div class="min-h-full flex-h-center" id="background_div">
+			<input type="hidden" value="https://bio.link" id="app-url" />
+			<input type="hidden" value="null" id="is-featured" />
+			<canvas id="bg-canvas" class="background-overlay"></canvas>
 
-    <!--
+			<div class="mt-48 page-full-wrap relative">
+				<input type="hidden" value="creator-page" id="page-type" />
+				<img
+					class="display-image m-auto"
+					src="assets/images/logo.jpg"
+					alt="Sukoblet Logo"
+				/>
+				<h2 class="page-title page-text-color page-text-font mt-16 text-center">
+					Sukoblet
+				</h2>
+
+				<div class="mt-24">
+					<div class="page-item-wrap relative">
+						<div class="page-item flex-both-center absolute"></div>
+						<a
+							target="_blank"
+							class="page-item-each py-10 flex-both-center"
+							href="https://www.twitch.tv/suk0blet"
+							data-id="261652"
+							data-type="page_item"
+						>
+							<img
+								class="link-each-image"
+								data-src="assets/images/twitch.png"
+								src="assets/images/twitch.svg"
+								alt="Twitch @suk0blet"
+							/>
+							<span class="item-title text-center">Twitch @suk0blet</span>
+						</a>
+					</div>
+					<div class="page-item-wrap relative">
+						<div class="page-item flex-both-center absolute"></div>
+						<a
+							target="_blank"
+							class="page-item-each py-10 flex-both-center"
+							href="https://www.instagram.com/sukoblet"
+							data-id="261685"
+							data-type="page_item"
+						>
+							<img
+								class="link-each-image"
+								data-src="assets/images/instagram.png"
+								src="assets/images/instagram.svg"
+								alt="Instagram @sukoblet"
+							/>
+							<span class="item-title text-center">Instagram @sukoblet</span>
+						</a>
+					</div>
+					<div class="page-item-wrap relative">
+						<div class="page-item flex-both-center absolute"></div>
+						<a
+							target="_blank"
+							class="page-item-each py-10 flex-both-center"
+							href="https://www.tiktok.com/@suk0blet"
+							data-id="261685"
+							data-type="page_item"
+						>
+							<img
+								class="link-each-image"
+								data-src="assets/images/facebook.png"
+								src="assets/images/tiktok.svg"
+								alt="TikTok @suk0blet"
+							/>
+							<span class="item-title text-center">TikTok @suk0blet</span>
+						</a>
+					</div>
+					<div class="page-item-wrap relative">
+						<div class="page-item flex-both-center absolute"></div>
+						<a
+							target="_blank"
+							class="page-item-each py-10 flex-both-center"
+							href="https://t.me/suk0blet"
+							data-id="261685"
+							data-type="page_item"
+						>
+							<img
+								class="link-each-image"
+								data-src="assets/images/telegram.png"
+								src="assets/images/telegram.svg"
+								alt="Telegram @suk0blet"
+							/>
+							<span class="item-title text-center">Telegram @suk0blet</span>
+						</a>
+					</div>
+					<div class="page-item-wrap relative">
+						<div class="page-item flex-both-center absolute"></div>
+						<a
+							target="_blank"
+							class="page-item-each py-10 flex-both-center"
+							href="https://www.youtube.com/@suk0blet"
+							data-id="261685"
+							data-type="page_item"
+						>
+							<img
+								class="link-each-image"
+								data-src="assets/images/youtube.png"
+								src="assets/images/youtube.svg"
+								alt="YouTube @suk0blet"
+							/>
+							<span class="item-title text-center">YouTube @suk0blet</span>
+						</a>
+					</div>
+					<div class="page-item-wrap relative">
+						<div class="page-item flex-both-center absolute"></div>
+						<a
+							target="_blank"
+							class="page-item-each py-10 flex-both-center"
+							href="https://donatello.to/suk0blet"
+							data-id="261685"
+							data-type="page_item"
+						>
+							<img
+								class="link-each-image"
+								data-src="assets/images/donatello.png"
+								src="assets/images/donatello.png"
+								alt="Support @suk0blet on Donatello"
+							/>
+							<span class="item-title text-center">Donatello @suk0blet</span>
+						</a>
+					</div>
+					<div class="page-item-wrap relative">
+						<div class="page-item flex-both-center absolute"></div>
+						<a
+							target="_blank"
+							class="page-item-each py-10 flex-both-center"
+							href="https://steamcommunity.com/tradeoffer/new/?partner=933529524&token=KvY5XUbg"
+							data-id="261685"
+							data-type="page_item"
+						>
+							<img
+								class="link-each-image"
+								data-src="assets/images/instagram.png"
+								src="assets/images/steam.jpg"
+								alt="Steam Trade Offer for @suk0blet"
+							/>
+							<span class="item-title text-center">SteamTrade @suk0blet</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<!--
     A different snowfall    
     <script src="assets/js/snowfall.js"></script>
     -->
